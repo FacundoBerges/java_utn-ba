@@ -66,9 +66,29 @@ public class Ejercicio02 {
         System.out.print("Ingrese cantidad de inmuebles: ");
         cantidadInmuebles = Integer.parseInt(sc.nextLine());
 
-        System.out.print("Ingrese cantidad de inmuebles: ");
-        cantidadInmuebles = Integer.parseInt(sc.nextLine());
+        do {
+            System.out.println("Posee una embarcación, aeronave de lujo o es titular de activos societarios que demuestran capacidad económica plena?");
+            System.out.println("\t1. si");
+            System.out.println("\t2. no");
+            System.out.print("Ingrese una opcion (1 o 2): ");
+            respuesta = Integer.parseInt(sc.nextLine());
+        } while (respuesta != 1 && respuesta != 2);
 
+        demuestraCapacidadEconomicaPlena = respuesta == 1;
+
+        sb.append("Usted ");
+
+        if(     ingresosHogar < MAX_INGRESOS &&
+                cantidadVehiculos < MAX_VEHICULOS_5_ANIOS &&
+                cantidadInmuebles < MAX_INMUEBLES &&
+                ! demuestraCapacidadEconomicaPlena ) {
+
+            sb.append("NO ");
+        }
+
+        sb.append("pertenece al segmento de ingresos altos.");
+
+        System.out.printf("\n%s", sb);
 
     }
 

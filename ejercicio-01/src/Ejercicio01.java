@@ -24,7 +24,8 @@ public class Ejercicio01 {
     public static void main(String[] args) {
         int numeroInicio;
         int numeroFin;
-        boolean mostrarNumerosPares = true;
+        int respuesta;
+        boolean mostrarNumerosPares;
         Scanner sc = new Scanner(System.in);
 
 
@@ -70,9 +71,19 @@ public class Ejercicio01 {
             }
         }
 
+        System.out.println();
 
         // Ejercicio C
-        mostrarNumerosPares = !mostrarNumerosPares;
+        do {
+            System.out.println();
+            System.out.println();
+            System.out.println("\t1. Pares");
+            System.out.println("\t2. Impares");
+            System.out.print("\nDesea mostrar numeros pares o impares? Ingrese la opcion correspondiente (1 o 2): ");
+            respuesta = Integer.parseInt(sc.nextLine());
+        } while (respuesta != 1 && respuesta != 2);
+
+        mostrarNumerosPares = (respuesta == 1);
 
         System.out.println("\n\nMostrar numeros pares = " + mostrarNumerosPares + ":");
 
