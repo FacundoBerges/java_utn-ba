@@ -9,7 +9,7 @@ import java.util.List;
 public class EjercicioA {
 
     public static void main(String[] args) {
-        int totalSum = sumNumbersFromFile("./numbers.txt");
+        int totalSum = sumNumbersFromFile("./src/ejercicio02/numbers.txt");
 
         System.out.printf("La suma de los numeros en el archivo da como total %d\n", totalSum);
     }
